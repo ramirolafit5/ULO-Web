@@ -1,0 +1,105 @@
+/* src/components/home/ExtraPresentation.module.css */
+
+/* Variables CSS para facilitar la gestión de colores y sombras */
+:root {
+  --primary-color: #4CAF50; /* Un color de acento verde para el título, por ejemplo */
+  --text-dark: #2c3e50;
+  --text-medium: #555;
+  --card-background: #ffffff;
+  --shadow-light: rgba(0, 0, 0, 0.1); /* Sombra más sutil y uniforme */
+  --shadow-medium: rgba(0, 0, 0, 0.18); /* Sombra para hover más pronunciada */
+  --shadow-strong: rgba(0, 0, 0, 0.25); /* Sombra para efectos muy pronunciados */
+  --border-radius-card: 15px;
+  --border-radius-image: 10px;
+}
+
+/* Estilos para el contenedor principal del slider (centrado y ancho máximo) */
+.slider-wrapper {
+    max-width: 95%; /* Un poco más ancho para dar más juego a los márgenes */
+    margin: 40px auto;   /* Centra el carrusel y añade margen superior/inferior para separarlo de otras secciones */
+    padding: 0;  /* Elimina el padding horizontal del wrapper para que los márgenes de las cards sean visibles */
+    box-sizing: border-box;
+    /* Asegúrate de que NO haya background-color o box-shadow aquí, el fondo de la página se verá a través */
+}
+
+/* Estilos para el título principal del carrusel */
+.slider-title {
+    text-align: center;
+    margin-bottom: 40px; /* Más espacio debajo del título */
+    color: var(--text-dark);
+    font-size: 2.5em; /* Título un poco más grande */
+    font-weight: bold;
+    letter-spacing: -0.5px; /* Ligeramente más compacto */
+}
+
+/* -------------------------------------------------------------------------------------- */
+/* ***** S O L U C I Ó N   P A R A   E L   R E C O R T E   Y   S E P A R A C I Ó N ***** */
+/* -------------------------------------------------------------------------------------- */
+
+/* Estilos aplicados a los contenedores directos de React-Slick para crear el espacio entre cards */
+/* ':global' es necesario porque '.slick-slide' es una clase generada por la librería externa. */
+:global(.slick-slide) {
+    /* Aquí se define el espacio horizontal entre cada card. Ajusta el valor para más o menos separación. */
+    padding: 0 15px; /* Un padding horizontal que crea la separación entre las cards. */
+    box-sizing: border-box; /* Crucial para que el padding no afecte el ancho total del slide */
+}
+
+/* Estilos para el contenedor de CADA ítem/diapositiva del carrusel (la "card" individual) */
+.carousel-item-container {
+    /* CAMBIO CLAVE AQUÍ: REMOVIDO 'height' para que la altura se ajuste al contenido */
+    height: auto;
+    display: flex;
+    flex-direction: column; /* Apila imagen y texto verticalmente */
+    justify-content: center; /* Centra los elementos (imagen y título) dentro de la card */
+    
+    align-items: center; /* Centra horizontalmente imagen y texto */
+    
+    box-sizing: border-box; /* Asegura que el padding interno no aumente el tamaño total */
+    
+    background-color: var(--card-background); /* Fondo blanco para la tarjeta */
+    border-radius: var(--border-radius-card); /* Bordes redondeados de la card */
+    
+    /* Sombra inicial: Ajustada para que se vea uniformemente en todas direcciones */
+    box-shadow: 0 0 20px var(--shadow-light); 
+    
+    /* Padding interno de la card para espacio entre contenido y bordes */
+    padding: 20px; /* Padding uniforme dentro de la card para evitar que el contenido toque los bordes */
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave al interactuar */
+}
+
+/* Efecto hover en la card completa */
+.carousel-item-container:hover {
+    box-shadow: 0 0 20px var(--shadow-light); /* La sombra permanece igual que el estado normal */
+}
+
+/* Estilos para la imagen dentro de cada tarjeta */
+.carousel-image {
+    width: 100%; /* La imagen ocupa el 100% del ancho disponible dentro del padding de la card */
+    object-fit: contain; /* Asegura que la imagen completa se muestre dentro de su contenedor sin ser recortada */
+    border-radius: var(--border-radius-image); /* bordes de la imagen */
+    display: block; /* Asegura que la imagen sea un bloque para aplicar márgenes */
+    flex-shrink: 0; /* Previene que la imagen se encoja si el título es muy largo */
+
+    /* CAMBIO CLAVE AQUÍ: Aumentamos el margen inferior para separar la imagen del título */
+    margin-bottom: 20px; /* Espacio entre la imagen y el texto del título */
+    margin-top: 0; /* Asegura que no haya margen superior si el padre tiene padding */
+}
+
+
+/* Estilos para el texto del título debajo de la imagen */
+.carousel-title-text {
+    text-align: center;
+    font-size: 1.15em;
+    color: var(--text-medium);
+    font-weight: 600;
+    
+    padding-top: 0; /* Ya se maneja con margin-bottom de la imagen */
+    box-sizing: border-box;
+    line-height: 1.3;
+    flex-grow: 1; /* Permite que el título crezca para ocupar espacio restante si es necesario */
+    
+}
+
+
+

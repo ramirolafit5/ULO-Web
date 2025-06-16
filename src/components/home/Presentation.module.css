@@ -1,0 +1,95 @@
+/* Presentation.module.css */
+
+.columnsWrapper {
+  display: flex;
+  justify-content: space-evenly; /* Centra el contenido horizontalmente */
+  flex-direction: column;
+  align-items: center;    /* Centra el contenido verticalmente */
+  gap: 20px; /* Mantener por si hay más elementos, aunque con un solo texto no se notará */
+  flex-wrap: wrap;
+
+  width: 100vw;
+  height: 90vh;
+  margin: 0;
+  padding: 0 40px; /* Añade padding horizontal para que el texto no toque los bordes */
+  overflow-x: hidden;
+
+  background-image: url('../../assets/fondoNuestro.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+  /* Opcional: Oscurecer ligeramente la imagen de fondo para que el texto blanco resalte */
+  background-blend-mode: overlay; /* O 'multiply', 'darken' */
+  background-color: rgba(0, 0, 0, 0.3); /* Capa oscura semitransparente */
+}
+
+/* Media query para móviles */
+@media (max-width: 768px) {
+  .columnsWrapper {
+    background-attachment: scroll;
+    padding: 20px; /* Padding más ajustado para móviles */
+  }
+}
+
+/* --- NUEVOS ESTILOS para el Contenido del Texto --- */
+
+.mainTextContent {
+  /* Contenedor del texto - sin fondo, solo alineación y ancho máximo */
+  max-width: 900px; /* Un ancho generoso para el texto centrado */
+  text-align: center;
+  color: white; /* Texto blanco para resaltar sobre el fondo oscuro */
+  font-family: 'Open Sans', sans-serif; /* Sugerencia de fuente moderna y legible */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para que el texto resalte más */
+}
+
+.mainHeading {
+  font-size: 4em; /* Título muy grande y de impacto */
+  margin-bottom: 20px;
+  font-weight: 700; /* Negrita */
+  letter-spacing: -1px; /* Ajuste de espaciado de letras */
+  line-height: 1.1; /* Espaciado de línea ajustado */
+}
+
+.introParagraph {
+  font-size: 1.4em; /* Párrafo introductorio un poco más grande */
+  margin-bottom: 30px;
+  font-weight: 300; /* Ligero */
+}
+
+.highlightList {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+  font-size: 1.3em;
+  font-weight: 500; /* Medio */
+  display: flex; /* Para que los ítems puedan estar en fila en desktop */
+  flex-wrap: wrap; /* Para que se apilen en móviles */
+  justify-content: center; /* Centrar ítems */
+  gap: 25px; /* Espacio entre ítems */
+}
+
+.highlightItem {
+  background-color: rgba(255, 255, 255, 0.15); /* Fondo sutil para cada ítem */
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borde sutil */
+  backdrop-filter: blur(5px); /* Efecto de cristal esmerilado - moderno */
+  -webkit-backdrop-filter: blur(5px); /* Para compatibilidad con Safari */
+  white-space: nowrap; /* Evita que el texto de los ítems se rompa en varias líneas */
+}
+
+/* Ajustes para móviles */
+@media (max-width: 600px) {
+  .mainHeading {
+    font-size: 2.8em; /* Título más pequeño en móviles */
+  }
+  .introParagraph {
+    font-size: 1.1em;
+  }
+  .highlightItem {
+    width: 100%; /* Ítems de la lista a ancho completo en móviles */
+    text-align: center;
+  }
+}

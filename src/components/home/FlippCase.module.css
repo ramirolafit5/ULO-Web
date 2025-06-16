@@ -1,0 +1,42 @@
+.outerWrapper {
+  background-color: #f0f4f8; /* fondo suave */
+  padding: 2rem 1rem;
+  margin-bottom: 3rem;
+}
+
+
+.tabContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f9fafc; /* fondo suave */
+  border-radius: 12px;
+  margin-top: 2rem;
+  flex-wrap: wrap; /* permite que se acomode verticalmente en mobile */
+}
+
+.sideImage {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+  max-width: 500px;
+}
+
+.textList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.textList li {
+  margin-bottom: 0.8rem;
+  font-size: 1.05rem;
+  color: #333;
+}

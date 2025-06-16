@@ -1,0 +1,32 @@
+/* TitleImage.module.css */
+
+.topImageTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.topSectionImage {
+    max-width: 800px;
+}
+
+.topMobileSectionImage {
+    display: none;
+}
+
+/* Media query para móvil */
+
+@media (max-width: 800px) {
+    .topSectionImage {
+        display: none;
+    }
+
+    .topMobileSectionImage {
+        display: block;
+        max-width: 420px;
+        min-width: 350px; /* recuerda agregar unidad px */
+    }
+}

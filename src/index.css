@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+/* Base CSS - Reinicio y configuración básica */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+html, body {
+    height: 100%;
+    font-family: sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+    padding-top: 0px; /* si lo usás para compensar navbar fijo, está bien */
+
+}
