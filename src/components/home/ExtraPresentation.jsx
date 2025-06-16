@@ -102,6 +102,7 @@ function ImageCarousel() {
                             src={image.src} // Fuente de la imagen
                             alt={image.alt} // Texto alternativo para accesibilidad
                             className={styles["carousel-image"]} // Clase para la imagen
+                            loading="lazy"
                         />
                         <p className={styles["carousel-title-text"]}>{image.title}</p> {/* Clase para el título del texto */}
                     </div>
