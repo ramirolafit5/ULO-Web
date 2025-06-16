@@ -58,9 +58,9 @@ export default function Presentation() {
                     </motion.li>
                 </motion.ul>
             </motion.div>
-            <motion.div>
+            {/* <motion.div>
                 <ShowUlo2 />
-            </motion.div>
+            </motion.div> */}
         </motion.div>
     );
 }

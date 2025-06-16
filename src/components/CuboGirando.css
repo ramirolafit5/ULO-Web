@@ -1,13 +1,17 @@
+:root {
+    --cubo-size: 200px; /* Define el tamaño base del cubo */
+}
+
 .cubo-container {
-  width: 200px;
-  height: 200px;
+  width: var(--cubo-size);
+  height: var(--cubo-size);
   perspective: 800px;
   margin: 80px auto;
 }
 
 .cubo {
-  width: 200px;
-  height: 200px;
+  width: var(--cubo-size);
+  height: var(--cubo-size);
   position: relative;
   transform-style: preserve-3d;
   animation: girar 10s infinite linear;
@@ -15,18 +19,18 @@
 
 .cara {
   position: absolute;
-  width: 200px;
-  height: 200px;
-  background-color: rgba(255, 0, 0, 0.4);
+  width: var(--cubo-size); /* Usa la variable */
+  height: var(--cubo-size); /* Usa la variable */
+  /* background-color: rgba(255, 0, 0, 0.4); */
   border: 2px solid #fff;
 }
 
-.frente  { transform: rotateY(0deg)   translateZ(100px); background-color: #f44336; }
-.atras   { transform: rotateY(180deg) translateZ(100px); background-color: #3f51b5; }
-.derecha { transform: rotateY(90deg)  translateZ(100px); background-color: #4caf50; }
-.izquierda { transform: rotateY(-90deg) translateZ(100px); background-color: #ff9800; }
-.arriba  { transform: rotateX(90deg)  translateZ(100px); background-color: #00bcd4; }
-.abajo   { transform: rotateX(-90deg) translateZ(100px); background-color: #9c27b0; }
+.frente  { transform: rotateY(0deg)   translateZ(100px); }
+.atras   { transform: rotateY(180deg) translateZ(100px); }
+.derecha { transform: rotateY(90deg)  translateZ(100px); }
+.izquierda { transform: rotateY(-90deg) translateZ(100px); }
+.arriba  { transform: rotateX(90deg)  translateZ(100px); }
+.abajo   { transform: rotateX(-90deg) translateZ(100px); }
 
 @keyframes girar {
   from {

@@ -64,23 +64,28 @@
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Transición más suave */
 }
 
-/* Efecto hover en la card completa */
-.carousel-item-container:hover {
-    transform: translateY(-5px); /* Pequeño levantamiento al pasar el ratón */
-    box-shadow: 0 10px 25px var(--shadow-medium); /* Sombra más pronunciada al hacer hover */
+.carousel-image {
+    transition: transform 0.4s ease;
 }
+
+.carousel-image:hover {
+    transform: scale(1.05); /* Zoom leve */
+}
+
 
 /* Estilos para la imagen dentro de cada tarjeta */
 .carousel-image {
-    width: 100%; /* La imagen ocupa el 100% del ancho disponible */
-    /* Aquí puedes experimentar con 'contain' o 'cover' según prefieras el recorte */
-    object-fit: contain; /* Asegura que la imagen completa se muestre sin ser recortada */
-    border-radius: var(--border-radius-image); /* Bordes de la imagen */
-    display: block; /* Asegura que la imagen sea un bloque para aplicar márgenes */
-    flex-shrink: 0; /* Previene que la imagen se encoja si el título es muy largo */
+    width: 100%;
+    object-fit: contain;
+    border-radius: var(--border-radius-image);
+    display: block;
+    flex-shrink: 0;
+    margin-bottom: var(--spacing-md);
 
-    margin-bottom: var(--spacing-md); /* Espacio entre la imagen y el texto del título */
+    /* 🚫 Elimina contorno negro al hacer clic */
+    outline: none;
 }
+
 
 /* Estilos para el texto del título debajo de la imagen */
 .carousel-title-text {
