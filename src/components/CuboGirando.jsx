@@ -1,4 +1,3 @@
-import React from 'react'
 import './CuboGirando.css'
 import ulitoScreen from '../assets/ulitoScreen.jpeg'
 

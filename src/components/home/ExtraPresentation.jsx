@@ -1,24 +1,13 @@
-// src/components/home/ExtraPresentation.jsx (o .tsx)
-
-import React from "react";
 import Slider from "react-slick";
-// Asegúrate de que estos CSS globales estén importados en tu archivo principal
-// (ej. src/main.jsx o src/App.jsx) para evitar duplicidad y asegurar que los estilos de Slick se carguen globalmente.
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// Importa tus imágenes aquí. Asegúrate de que las rutas sean correctas.
-// Si tienes varias imágenes, impórtalas con nombres distintos:
-// import imagen2 from "../../assets/otra_imagen.png";
+
 import imagen1 from "../../assets/fondo5.png";
 
-// Importa tu archivo de CSS Modules para este componente
 import styles from './ExtraPresentation.module.css';
 
-// Renombramos el componente para que sea más descriptivo y reutilizable
 function ImageCarousel() {
-    // Definimos el array de objetos para las imágenes
-    // Cada objeto debe tener un ID único, la fuente (src), texto alternativo (alt) y un título.
     const images = [
         {
             id: 1,
@@ -58,7 +47,6 @@ function ImageCarousel() {
         }
     ];
 
-    // Configuración del carrusel React-Slick
     // Se usa 'const' porque 'settings' no se reasigna
     const settings = {
         dots: true, // Muestra los puntos de navegación en la parte inferior

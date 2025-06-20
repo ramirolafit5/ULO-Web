@@ -1,145 +1,117 @@
-/* src/components/home/ExtraPresentation.module.css */
-
-/* Variables CSS para facilitar la gestión de colores y sombras */
 :root {
-    --primary-color: #4CAF50; /* Un color de acento verde para el título, por ejemplo */
-    --text-dark: #2c3e50;
-    --text-medium: #555;
-    --card-background: #ffffff;
-    --shadow-light: rgba(0, 0, 0, 0.08); /* Sombra más sutil */
-    --shadow-medium: rgba(0, 0, 0, 0.15); /* Sombra para hover más pronunciada */
-    --border-radius-card: 15px;
-    --border-radius-image: 10px;
-    --spacing-xs: 10px;
-    --spacing-sm: 15px;
-    --spacing-md: 20px;
-    --spacing-lg: 40px;
+  --primary-color: #4CAF50;
+  --text-dark: #1e1e1e;
+  --text-medium: #4a4a4a;
+  --card-background: #f9f9f9;
+  --shadow-light: rgba(0, 0, 0, 0.08);
+  --shadow-medium: rgba(0, 0, 0, 0.15);
+  --border-radius-card: 8px;
+  --border-radius-image: 6px;
+  --spacing-xs: 10px;
+  --spacing-sm: 15px;
+  --spacing-md: 20px;
+  --spacing-lg: 40px;
 }
 
-/* Estilos para el contenedor principal del slider (centrado y ancho máximo) */
+/* Contenedor del carrusel */
 .slider-wrapper {
-    max-width: 95%; /* Un poco más ancho para dar más juego a los márgenes */
-    margin: var(--spacing-lg) auto; /* Centra el carrusel y añade margen superior/inferior */
-    padding: 0 var(--spacing-sm); /* Un padding lateral sutil dentro del wrapper */
-    box-sizing: border-box;
+  max-width: 90%;
+  margin: var(--spacing-lg) auto;
+  padding: 0 var(--spacing-sm);
+  box-sizing: border-box;
 }
 
-/* Estilos para el título principal del carrusel */
+/* Título principal */
 .slider-title {
-    text-align: center;
-    margin-bottom: var(--spacing-lg); /* Más espacio debajo del título */
-    color: var(--text-dark);
-    font-size: 2.5em; /* Título un poco más grande */
-    font-weight: bold;
-    letter-spacing: -0.5px;
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-dark);
+  font-size: 2.4em;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.3px;
 }
 
-/* -------------------------------------------------------------------------------------- */
-/* ***** S O L U C I Ó N   P A R A   E L   R E C O R T E   Y   S E P A R A C I Ó N ***** */
-/* -------------------------------------------------------------------------------------- */
-
-/* Estilos aplicados a los contenedores directos de React-Slick para crear el espacio entre cards */
-/* ':global' es necesario porque '.slick-slide' es una clase generada por la librería externa. */
+/* Estilo global para las slides de slick */
 :global(.slick-slide) {
-    /* Este padding crea la separación visual entre las tarjetas. */
-    padding: 0 var(--spacing-sm); /* Espacio horizontal de 15px a cada lado de la card */
-    box-sizing: border-box; /* Crucial para que el padding no afecte el ancho total del slide */
+  padding: 0 var(--spacing-sm);
+  box-sizing: border-box;
 }
 
-/* Estilos para el contenedor de CADA ítem/diapositiva del carrusel (la "card" individual) */
+/* Tarjeta individual */
 .carousel-item-container {
-    height: auto; /* La altura se ajustará al contenido */
-    display: flex;
-    flex-direction: column; /* Apila imagen y texto verticalmente */
-    justify-content: flex-start; /* Alinea los elementos al inicio de la tarjeta */
-    align-items: center; /* Centra horizontalmente imagen y texto */
-
-    box-sizing: border-box; /* Asegura que el padding interno no aumente el tamaño total */
-    background-color: var(--card-background); /* Fondo blanco para la tarjeta */
-    border-radius: var(--border-radius-card); /* Bordes redondeados de la card */
-
-    box-shadow: 0 5px 20px var(--shadow-light); /* Sombra inicial con offset vertical para un look más "flotante" */
-    padding: var(--spacing-md); /* Padding interno uniforme de la card */
-
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Transición más suave */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: var(--card-background);
+  border-radius: var(--border-radius-card);
+  box-shadow: 0 4px 12px var(--shadow-light);
+  border: 1px solid #e0e0e0;
+  padding: 16px;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
+/* Imagen dentro de la tarjeta */
 .carousel-image {
-    transition: transform 0.4s ease;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-image);
+  margin-bottom: var(--spacing-sm);
+  outline: none;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .carousel-image:hover {
-    transform: scale(1.05); /* Zoom leve */
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
-
-/* Estilos para la imagen dentro de cada tarjeta */
-.carousel-image {
-    width: 100%;
-    object-fit: contain;
-    border-radius: var(--border-radius-image);
-    display: block;
-    flex-shrink: 0;
-    margin-bottom: var(--spacing-md);
-
-    /* 🚫 Elimina contorno negro al hacer clic */
-    outline: none;
-}
-
-
-/* Estilos para el texto del título debajo de la imagen */
+/* Título de cada imagen */
 .carousel-title-text {
-    text-align: center;
-    font-size: 1.15em;
-    color: var(--text-medium);
-    font-weight: 600;
-
-    box-sizing: border-box;
-    line-height: 1.3;
-    flex-grow: 1; /* Permite que el título crezca para ocupar espacio restante si es necesario */
-    padding-top: 0; /* Asegura que no haya padding superior, el margen ya lo maneja */
+  text-align: left;
+  font-size: 1.1em;
+  color: var(--text-medium);
+  font-weight: 500;
+  line-height: 1.4;
 }
 
-/* -------------------------------------------------------------------------------------- */
-/* ***** O P T I M I Z A C I O N E S   P A R A   R E S P O N S I V I D A D ***** */
-/* -------------------------------------------------------------------------------------- */
-
-/* Media Query para pantallas pequeñas (móviles) */
+/* Responsivo para móviles */
 @media (max-width: 600px) {
-    .slider-wrapper {
-        margin: var(--spacing-md) auto; /* Ajusta márgenes en móviles */
-        padding: 0 var(--spacing-xs); /* Menos padding lateral en móviles */
-    }
+  .slider-wrapper {
+    margin: var(--spacing-md) auto;
+    padding: 0 var(--spacing-xs);
+  }
 
-    .slider-title {
-        font-size: 1.8em; /* Título más pequeño en móviles */
-        margin-bottom: var(--spacing-md);
-    }
+  .slider-title {
+    font-size: 1.9em;
+    margin-bottom: var(--spacing-md);
+  }
 
-    :global(.slick-slide) {
-        padding: 0 var(--spacing-xs); /* Menos separación entre tarjetas en móviles */
-    }
+  :global(.slick-slide) {
+    padding: 0 var(--spacing-xs);
+  }
 
-    .carousel-item-container {
-        padding: var(--spacing-sm); /* Menos padding interno en la tarjeta en móviles */
-    }
+  .carousel-item-container {
+    padding: var(--spacing-sm);
+  }
 
-    .carousel-image {
-        margin-bottom: var(--spacing-sm); /* Menos espacio entre imagen y texto en móviles */
-    }
+  .carousel-image {
+    margin-bottom: var(--spacing-xs);
+  }
 
-    .carousel-title-text {
-        font-size: 1em; /* Texto más pequeño en móviles */
-    }
+  .carousel-title-text {
+    font-size: 1em;
+  }
 }
 
-/* Media Query para tabletas y tamaños intermedios */
+/* Responsivo para tabletas */
 @media (min-width: 601px) and (max-width: 1023px) {
-    .slider-title {
-        font-size: 2.2em;
-    }
+  .slider-title {
+    font-size: 2.2em;
+  }
 
-    :global(.slick-slide) {
-        padding: 0 var(--spacing-sm);
-    }
+  :global(.slick-slide) {
+    padding: 0 var(--spacing-sm);
+  }
 }

@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-evenly; /* Centra el contenido horizontalmente */
   flex-direction: column;
-  align-items: center;    /* Centra el contenido verticalmente */
+  align-items: flex-end;    /* Centra el contenido verticalmente */
   gap: 20px; /* Mantener por si hay más elementos, aunque con un solo texto no se notará */
   flex-wrap: wrap;
 
@@ -14,7 +14,7 @@
   padding: 0 40px; /* Añade padding horizontal para que el texto no toque los bordes */
   overflow-x: hidden;
 
-  background-image: url('../../assets/fondoNuestro.jpeg');
+  background-image: url('../../assets/pruebaBannerWeb.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -37,11 +37,13 @@
 
 .mainTextContent {
   /* Contenedor del texto - sin fondo, solo alineación y ancho máximo */
-  max-width: 900px; /* Un ancho generoso para el texto centrado */
+  max-width: 950px; /* Un ancho generoso para el texto centrado */
   text-align: center;
   color: white; /* Texto blanco para resaltar sobre el fondo oscuro */
   font-family: 'Open Sans', sans-serif; /* Sugerencia de fuente moderna y legible */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para que el texto resalte más */
+  margin-bottom: 50px;
+  margin-right: clamp(1rem, 4vw, 5rem);
 }
 
 .mainHeading {
@@ -91,5 +93,26 @@
   .highlightItem {
     width: 100%; /* Ítems de la lista a ancho completo en móviles */
     text-align: center;
+  }
+}
+
+@media (max-width: 1350px) {
+  .mainTextContent {
+    margin-right: clamp(1rem, 2vw, 5rem);
+  }
+}
+
+@media (max-width: 1250px) {
+  .mainTextContent {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .columnsWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Centra el contenido verticalmente */
+    background-image: url('../../assets/daleConMasPruebasNomas2.jpeg');
   }
 }

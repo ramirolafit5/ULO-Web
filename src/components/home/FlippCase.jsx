@@ -9,6 +9,7 @@ import Box from '@mui/material/Box';
 
 import styles from './FlippCase.module.css';
 import uloSentado from '../../assets/ImagenUloSentado.png'; // o ponelo en /public y usás "/uloSentado.png"
+import masPruebas from '../../assets/daleConMasPruebasNomas2.jpeg'
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -81,7 +82,7 @@ export default function FullWidthTabs() {
                 <TabPanel value={value} index={0} dir={theme.direction}>
                     <div className={styles.tabContent}>
                         <img
-                            src={uloSentado}
+                            src={masPruebas}
                             alt="Imagen principal"
                             className={styles.sideImage}
                         />

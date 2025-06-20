@@ -1,8 +1,5 @@
-// Presentation.jsx (o .tsx)
 import { motion } from 'framer-motion';
-import styles from './Presentation.module.css'; // Asegúrate de que este sea el nombre correcto
-import ShowUlo from './ShowUlo';
-import ShowUlo2 from './ShowUlo2';
+import styles from './Presentation.module.css';
 
 export default function Presentation() {
     // Variantes para animar la entrada de los elementos
@@ -42,9 +39,9 @@ export default function Presentation() {
                     Conocé ULO.
                 </motion.p>
                 <motion.p className={styles.introParagraph} variants={itemVariants}>
-                    En "ULO", creemos que aprender puede ser simple y divertido.
-                    Diseñamos experiencias educativas con muñecos, naipes y animales creados con
-                    letras, para acompañar a los peques en su desarrollo.
+                    En "ULO", creemos que aprender puede ser simple y divertido.<br />
+                    Diseñamos experiencias educativas con muñecos, naipes y animales <br />
+                    creados con letras, para acompañar a los peques en su desarrollo.
                 </motion.p>
                 <motion.ul className={styles.highlightList} variants={containerVariants}> {/* Re-usamos containerVariants para stagger */}
                     <motion.li className={styles.highlightItem} variants={itemVariants}>
@@ -58,9 +55,6 @@ export default function Presentation() {
                     </motion.li>
                 </motion.ul>
             </motion.div>
-            {/* <motion.div>
-                <ShowUlo2 />
-            </motion.div> */}
         </motion.div>
     );
 }

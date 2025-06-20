@@ -1,4 +1,3 @@
-import DatosRelevantes from '../components/home/DatosRelevantes';
 import ExtraPresentation from '../components/home/ExtraPresentation';
 import FlippCase from '../components/home/FlippCase';
 import Presentation from '../components/home/Presentation';
