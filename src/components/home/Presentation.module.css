@@ -113,6 +113,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;    /* Centra el contenido verticalmente */
-    background-image: url('../../assets/daleConMasPruebasNomas2.jpeg');
+    background-image: url('../../assets/fondoUlo.jpeg');
   }
 }

@@ -19,6 +19,7 @@
 
 .sideImage {
   max-width: 300px;
+  max-height: 400px; /* se lo agregué yo */
   width: 100%;
   height: auto;
   border-radius: 8px;

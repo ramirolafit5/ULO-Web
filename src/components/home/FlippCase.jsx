@@ -10,6 +10,8 @@ import Box from '@mui/material/Box';
 import styles from './FlippCase.module.css';
 import uloSentado from '../../assets/ImagenUloSentado.png'; // o ponelo en /public y usás "/uloSentado.png"
 import masPruebas from '../../assets/daleConMasPruebasNomas2.jpeg'
+import todosLosAnimales from '../../assets/todosLosAnimales.png'
+import pruebaAlgunosAnimales from '../../assets/pruebaAlgunosAnimales.png'
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -98,9 +100,28 @@ export default function FullWidthTabs() {
                     </div>
                 </TabPanel>
 
-                <TabPanel value={value} index={1} dir={theme.direction}>
-                    Item Two
+                <TabPanel value={value} index={2} dir={theme.direction}>
+                    <div className={styles.tabContent}>
+                        <img
+                            src={pruebaAlgunosAnimales}
+                            alt="Imagen principal"
+                            className={styles.sideImage}
+                        />
+
+                        <div className={styles.description}>
+                            <ul className={styles.textList}>
+                                <li>- Lorem lorem lorem lorem lorem lorem</li>
+                                <li>- lorem lorem lorem lorem</li>
+                                <li>- lorem lorem</li>
+                                <li>- lorem lorem lorem lorem lorem lorem</li>
+                            </ul>
+                        </div>
+                    </div>
                 </TabPanel>
+
+                {/*                 <TabPanel value={value} index={1} dir={theme.direction}>
+                    Item Two
+                </TabPanel> */}
                 <TabPanel value={value} index={2} dir={theme.direction}>
                     Item Three
                 </TabPanel>
