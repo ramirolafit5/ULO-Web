@@ -3,7 +3,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-import imagen1 from "../../assets/fondo5.png";
+import imagen1 from "../../assets/fotoCarrusel1.jpg";
+import imagen2 from "../../assets/fotoCarrusel2.jpg";
+import imagen3 from "../../assets/fotoCarrusel3.jpg";
+import imagen4 from "../../assets/fotoCarrusel4.jpg";
+import imagen5 from "../../assets/fotoCarrusel5.jpg";
+import imagen6 from "../../assets/fotoCarrusel6.jpg";
+
 
 import styles from './ExtraPresentation.module.css';
 
@@ -11,39 +17,27 @@ function ImageCarousel() {
     const images = [
         {
             id: 1,
-            src: imagen1, // Usa la variable importada
-            alt: "Una abeja volando en un jardín",
-            title: "Las abejas y la polinización"
+            src: imagen1,
         },
         {
             id: 2,
-            src: imagen1, // Cambia esto por otra imagen si tienes más
-            alt: "Un detalle de una abeja en una flor",
-            title: "Las abejas y la polinización"
+            src: imagen2,
         },
         {
             id: 3,
-            src: imagen1,
-            alt: "Abejas trabajando en una colmena",
-            title: "Organización de la colmena"
+            src: imagen3,
         },
         {
             id: 4,
-            src: imagen1,
-            alt: "Una abeja recolectando néctar",
-            title: "Ciclo de vida de las abejas"
+            src: imagen4,
         },
         {
             id: 5,
-            src: imagen1,
-            alt: "Abeja en vuelo capturando el momento",
-            title: "Vuelo y comunicación"
+            src: imagen5,
         },
         {
             id: 6,
-            src: imagen1,
-            alt: "Una abeja solitaria",
-            title: "Abejas solitarias"
+            src: imagen6,
         }
     ];
 
@@ -80,7 +74,7 @@ function ImageCarousel() {
     return (
         // Contenedor principal del carrusel, usa las clases de CSS Modules
         <div className={styles["slider-wrapper"]}>
-            <h2 className={styles["slider-title"]}>La evolucion de ULO a traves del tiempo..</h2>
+            <h2 className={styles["slider-title"]}>ULO a través del tiempo..</h2>
             <Slider {...settings}>
                 {/* Mapeamos el array de imágenes para renderizar cada diapositiva */}
                 {images.map(image => (
@@ -92,7 +86,6 @@ function ImageCarousel() {
                             className={styles["carousel-image"]} // Clase para la imagen
                             loading="lazy"
                         />
-                        <p className={styles["carousel-title-text"]}>{image.title}</p> {/* Clase para el título del texto */}
                     </div>
                 ))}
             </Slider>

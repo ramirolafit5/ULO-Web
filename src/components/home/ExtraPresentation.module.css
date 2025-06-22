@@ -55,9 +55,9 @@
 /* Imagen dentro de la tarjeta */
 .carousel-image {
   width: 100%;
+  max-height: 250px;
   object-fit: cover;
   border-radius: var(--border-radius-image);
-  margin-bottom: var(--spacing-sm);
   outline: none;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
@@ -94,10 +94,6 @@
 
   .carousel-item-container {
     padding: var(--spacing-sm);
-  }
-
-  .carousel-image {
-    margin-bottom: var(--spacing-xs);
   }
 
   .carousel-title-text {
