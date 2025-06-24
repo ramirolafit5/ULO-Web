@@ -1,5 +1,5 @@
 import './CuboGirando.css'
-import ulitoScreen from '../assets/ulitoScreen.jpeg'
+import ulitoScreen from '../assets/ulitoScreen.webp'
 
 export default function CuboGirando() {
     return (

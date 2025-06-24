@@ -9,7 +9,7 @@ import Box from '@mui/material/Box';
 import styles from './FlippCase.module.css';
 
 import flipFondoMuñeco from '../../assets/flipFondoMuñeco.webp'
-import pruebaAlgunosAnimales from '../../assets/pruebaAlgunosAnimales.png'
+import pruebaAlgunosAnimales from '../../assets/pruebaAlgunosAnimales.webp'
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;

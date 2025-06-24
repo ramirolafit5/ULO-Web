@@ -2,14 +2,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
 import imagen1 from "../../assets/fotoCarrusel1.webp";
 import imagen2 from "../../assets/fotoCarrusel2.webp";
 import imagen3 from "../../assets/fotoCarrusel3.webp";
 import imagen4 from "../../assets/fotoCarrusel4.webp";
 import imagen5 from "../../assets/fotoCarrusel5.webp";
 import imagen6 from "../../assets/fotoCarrusel6.webp";
-
 
 import styles from './ExtraPresentation.module.css';
 
@@ -18,26 +16,32 @@ function ImageCarousel() {
         {
             id: 1,
             src: imagen1,
+            alt: "Descripción de la imagen 1 del carrusel"
         },
         {
             id: 2,
             src: imagen2,
+            alt: "Descripción de la imagen 2 del carrusel"
         },
         {
             id: 3,
             src: imagen3,
+            alt: "Descripción de la imagen 3 del carrusel"
         },
         {
             id: 4,
             src: imagen4,
+            alt: "Descripción de la imagen 4 del carrusel"
         },
         {
             id: 5,
             src: imagen5,
+            alt: "Descripción de la imagen 5 del carrusel"
         },
         {
             id: 6,
             src: imagen6,
+            alt: "Descripción de la imagen 6 del carrusel"
         }
     ];
 

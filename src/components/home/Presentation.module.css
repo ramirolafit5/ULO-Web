@@ -14,7 +14,7 @@
   padding: 0 40px; /* Añade padding horizontal para que el texto no toque los bordes */
   overflow-x: hidden;
 
-  background-image: url('../../assets/pruebaBannerWeb.jpg');
+  background-image: url('../../assets/pruebaBannerWeb.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -113,6 +113,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;    /* Centra el contenido verticalmente */
-    background-image: url('../../assets/fondoUlo.jpeg');
+    background-image: url('../../assets/fondoUlo.webp');
   }
 }
