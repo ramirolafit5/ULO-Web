@@ -1,32 +1,33 @@
 // postcss.config.js
 import autoprefixer from 'autoprefixer';
+import purgecss from '@fullhuman/postcss-purgecss'; // Importación estándar
 
-// Importa purgecss usando 'require' si estás en un entorno Node que lo soporta,
-// o asegúrate de que la importación default se use correctamente.
-// La forma más robusta con ESM (ES Modules) que usa Vite es a menudo así:
-import _purgecss from '@fullhuman/postcss-purgecss';
-const purgecss = _purgecss; // Asignamos la importación por defecto a una constante
+// Esta parte es crucial para el error "purgecss is not a function"
+// A veces, el módulo se exporta de forma que la función principal está en .default
+const purgecssPlugin = purgecss.default ? purgecss.default : purgecss;
 
-// Asegúrate de que esto solo se ejecute en producción
+// Define si estamos en producción (ej. al correr npm run build)
 const IS_PRODUCTION = process.env.NODE_ENV === 'production';
 
 export default {
   plugins: [
     autoprefixer(),
-    // Solo aplica PurgeCSS en producción
-    IS_PRODUCTION && purgecss({
+    // Solo aplica PurgeCSS en producción para evitar problemas durante el desarrollo
+    IS_PRODUCTION && purgecssPlugin({ // Aquí usamos purgecssPlugin en lugar de purgecss directamente
       content: [
-        './index.html', // Ruta a tu HTML principal
-        './src/**/*.{js,jsx,ts,tsx}', // Rutas a tus archivos JavaScript/TypeScript (donde usas clases CSS)
+        './index.html',
+        './src/**/*.{js,jsx,ts,tsx}',
+        // Asegúrate de que estas rutas sean correctas y cubran todos los archivos donde usas clases CSS.
+        // Si usas componentes de librerías con clases específicas que no se analizan estáticamente,
+        // o clases dinámicas, deberías agregarlas a 'safelist'.
       ],
       safelist: [
-        // Clases que no deben ser purgadas, ej: para librerías o clases dinámicas
-        'slick-slide', // Si usas React Slick o similar para el carrusel
-        'slick-active',
-        'slick-current',
-        'slick-dots',
-        // Añade aquí cualquier otra clase que sepas que se usa dinámicamente
+        // Ejemplos de clases a safelist (añade las que tu proyecto necesite, ej. para carruseles, transiciones)
+        // 'slick-slide',
+        // 'slick-active',
+        // 'fade-in',
+        // /regex-para-clases-dinamicas/
       ],
     }),
-  ].filter(Boolean), // Elimina los valores 'false' si PurgeCSS no se aplica en desarrollo
+  ].filter(Boolean), // Filtra los valores `false` si PurgeCSS no se ejecuta en desarrollo
 };
