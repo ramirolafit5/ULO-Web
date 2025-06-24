@@ -4,13 +4,11 @@ import { useTheme } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 import styles from './FlippCase.module.css';
 
-import masPruebas from '../../assets/daleConMasPruebasNomas2.jpeg'
-import flipFondoMuñeco from '../../assets/flipFondoMuñeco.jpg'
+import flipFondoMuñeco from '../../assets/flipFondoMuñeco.webp'
 import pruebaAlgunosAnimales from '../../assets/pruebaAlgunosAnimales.png'
 
 function TabPanel(props) {
@@ -90,11 +88,13 @@ export default function FullWidthTabs() {
                         />
 
                         <div className={styles.description}>
+                            <h3 className={styles.title}>Muñeco Alfabetizador</h3> {/* Nuevo título */}
                             <ul className={styles.textList}>
-                                <li>- Lorem lorem lorem lorem lorem lorem</li>
-                                <li>- lorem lorem lorem lorem</li>
-                                <li>- lorem lorem</li>
-                                <li>- lorem lorem lorem lorem lorem lorem</li>
+                                <li>Abecedario en imprenta mayúscula.</li>
+                                <li>Veintisiete letras en Braile.</li>
+                                <li>Animales con cuerpos representados con letras.</li>
+                                <li>QR's.</li>
+                                <li>10 números naturales.</li>
                             </ul>
                         </div>
                     </div>
@@ -119,9 +119,9 @@ export default function FullWidthTabs() {
                     </div>
                 </TabPanel>
 
-                {/*                 <TabPanel value={value} index={1} dir={theme.direction}>
+                <TabPanel value={value} index={1} dir={theme.direction}>
                     Item Two
-                </TabPanel> */}
+                </TabPanel>
                 <TabPanel value={value} index={2} dir={theme.direction}>
                     Item Three
                 </TabPanel>

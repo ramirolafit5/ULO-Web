@@ -4,30 +4,38 @@
   margin-bottom: 3rem;
 }
 
-
 .tabContent {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-  background-color: #f9fafc; /* fondo suave */
-  border-radius: 12px;
-  margin-top: 2rem;
-  flex-wrap: wrap; /* permite que se acomode verticalmente en mobile */
+  align-items: center;         /* Centra verticalmente imagen + texto */
+  gap: 3rem;                   /* Espacio entre imagen y texto */
+  padding: 2rem 1rem;          /* Espaciado interno general */
+  flex-wrap: wrap;             /* Responsivo si el contenedor es chico */
 }
 
 .sideImage {
-  max-width: 300px;
-  max-height: 400px; /* se lo agregué yo */
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   max-width: 500px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #222;
 }
 
 .textList {
@@ -39,5 +47,15 @@
 .textList li {
   margin-bottom: 0.8rem;
   font-size: 1.05rem;
-  color: #333;
+  color: #444;
+  line-height: 1.6;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.textList li::before {
+  content: "–"; /* Guion largo */
+  position: absolute;
+  left: 0;
+  color: #777;
 }

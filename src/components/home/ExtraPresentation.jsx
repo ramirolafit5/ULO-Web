@@ -3,12 +3,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-import imagen1 from "../../assets/fotoCarrusel1.jpg";
-import imagen2 from "../../assets/fotoCarrusel2.jpg";
-import imagen3 from "../../assets/fotoCarrusel3.jpg";
-import imagen4 from "../../assets/fotoCarrusel4.jpg";
-import imagen5 from "../../assets/fotoCarrusel5.jpg";
-import imagen6 from "../../assets/fotoCarrusel6.jpg";
+import imagen1 from "../../assets/fotoCarrusel1.webp";
+import imagen2 from "../../assets/fotoCarrusel2.webp";
+import imagen3 from "../../assets/fotoCarrusel3.webp";
+import imagen4 from "../../assets/fotoCarrusel4.webp";
+import imagen5 from "../../assets/fotoCarrusel5.webp";
+import imagen6 from "../../assets/fotoCarrusel6.webp";
 
 
 import styles from './ExtraPresentation.module.css';
