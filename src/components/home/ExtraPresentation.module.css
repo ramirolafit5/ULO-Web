@@ -28,12 +28,6 @@
 }
 
 /* Título principal */
-/* .slider-title {
-  padding: 1rem;
-  text-align: center;
-  font-size: 2.4em;
-  font-family: 'Poppins', sans-serif;
-} */
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
 
@@ -65,15 +59,14 @@
   transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
-/* Imagen dentro de la tarjeta */
 .carousel-image {
-  width: 100%;
-  max-height: 250px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: var(--border-radius-image);
-  outline: none;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
 
 .carousel-image:hover {
   transform: scale(1.02);
