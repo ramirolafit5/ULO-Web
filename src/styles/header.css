@@ -25,6 +25,7 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0; /* Asegura que el contenedor del logo no se encoja más allá de lo necesario */
+    cursor: pointer;
     /* overflow: hidden; /* Esto es muy útil si el logo es muy grande y debe recortarse si sobrepasa el contenedor. */
 }
 

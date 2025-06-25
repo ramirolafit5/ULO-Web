@@ -23,7 +23,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  max-width: 500px;
+  width: 500px;
   padding: 1rem;
   background-color: #f9f9f9;
   border-radius: 12px;
@@ -31,9 +31,11 @@
 }
 
 .title {
+  display: flex;
+  justify-content: center;
   font-size: 1.6rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   color: #222;
 }
 
@@ -47,14 +49,81 @@
   margin-bottom: 0.8rem;
   font-size: 1.05rem;
   color: #444;
-  line-height: 1.6;
+  line-height: 2;
   padding-left: 1.2rem;
   position: relative;
 }
 
 .textList li::before {
-  content: "–"; /* Guion largo */
+  content: "▪️";
   position: absolute;
   left: 0;
   color: #777;
 }
+
+/* --------------------------- */
+
+.liinline {
+  display: block;
+  position: relative;
+}
+
+.firstItem {
+  font-weight: 500;
+  margin-left: 0.44rem;
+  color: #444;
+}
+
+.textList2 {
+  list-style: none;
+  margin: 0.5rem 0 0 22ch; /* Ajusta según lo que mida el texto */
+  padding: 0;
+  margin-top: 2px;
+}
+
+.textList2 li {
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #444;
+  padding-left: 0.65rem;
+  position: relative;
+}
+
+.textList2 li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #444;
+}
+
+.liinline3 {
+  display: none;
+}
+
+.textList3 li {
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #444;
+  margin-left: 2rem;
+  padding-left: 0.65rem;
+  position: relative;
+}
+
+.textList3 li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #444;
+}
+
+@media (max-width: 600px) {
+  
+  .liinline{
+    display: none;
+  }
+  
+  .liinline3{
+    display: block;
+  }
+}
+

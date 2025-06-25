@@ -58,6 +58,7 @@ function Style() {
                 font-size: 1.5rem;
                 font-weight: bold;
                 line-height: 1.4;
+                color: #444;
             }
 
             .split-word {

@@ -9,7 +9,7 @@ import Box from '@mui/material/Box';
 import styles from './FlippCase.module.css';
 
 import flipFondoMuñeco from '../../assets/flipFondoMuñeco.webp'
-import pruebaAlgunosAnimales from '../../assets/pruebaAlgunosAnimales.webp'
+import pruebaAlgunosAnimales from '../../assets/pruebaAlgunosAnimales.jpg'
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -73,8 +73,8 @@ export default function FullWidthTabs() {
                         variant="fullWidth"
                         aria-label="full width tabs example"
                     >
-                        <Tab label="Muñeco principal" {...a11yProps(0)} />
-                        <Tab label="Cartas" {...a11yProps(1)} />
+                        <Tab label="Muñeco" {...a11yProps(0)} />
+                        <Tab label="Naipes" {...a11yProps(1)} />
                         <Tab label="Animales" {...a11yProps(2)} />
                     </Tabs>
                 </AppBar>
@@ -83,18 +83,40 @@ export default function FullWidthTabs() {
                     <div className={styles.tabContent}>
                         <img
                             src={flipFondoMuñeco}
-                            alt="Imagen principal"
+                            alt="Muñeco"
                             className={styles.sideImage}
                         />
 
                         <div className={styles.description}>
-                            <h3 className={styles.title}>Muñeco Alfabetizador</h3> {/* Nuevo título */}
+                            <h3 className={styles.title}>Recurso Alfabetizador</h3>
                             <ul className={styles.textList}>
                                 <li>Abecedario en imprenta mayúscula.</li>
                                 <li>Veintisiete letras en Braile.</li>
                                 <li>Animales con cuerpos representados con letras.</li>
-                                <li>QR's.</li>
+                                <li>Un QR por cada cubo.</li>
                                 <li>10 números naturales.</li>
+                                <li>Complementario con naipes de autor.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </TabPanel>
+
+                <TabPanel value={value} index={1} dir={theme.direction}>
+                    <div className={styles.tabContent}>
+                        <img
+                            src={pruebaAlgunosAnimales}
+                            alt="Naipes"
+                            className={styles.sideImage}
+                        />
+
+                        <div className={styles.description}>
+                            <h3 className={styles.title}>Barabaras</h3>
+                            <ul className={styles.textList}>
+                                <li>WuloW ➤ la diversidad animal y su habitat.</li>
+                                <li>RASTROS ➤ desplazamiento, conteo, cantidad y huellas.</li>
+                                <li>Quezón ➤ vocales y consonantes iniciales acompañando la vida animal.</li>
+                                <li>S16NOS ➤ series ascendentes y descendentes desde el 0 hasta el 10 y viceversa.</li>
+                                <li>Kop1a ➤ imprenta minúscula, objetos y animales.</li>
                             </ul>
                         </div>
                     </div>
@@ -104,26 +126,39 @@ export default function FullWidthTabs() {
                     <div className={styles.tabContent}>
                         <img
                             src={pruebaAlgunosAnimales}
-                            alt="Imagen principal"
+                            alt="Animales"
                             className={styles.sideImage}
                         />
 
                         <div className={styles.description}>
+                            <h3 className={styles.title}>Diversidad</h3>
                             <ul className={styles.textList}>
-                                <li>- Lorem lorem lorem lorem lorem lorem</li>
-                                <li>- lorem lorem lorem lorem</li>
-                                <li>- lorem lorem</li>
-                                <li>- lorem lorem lorem lorem lorem lorem</li>
+                                <li>27 animales creados con letras, comas y puntos. </li>
+                                <li>Imágenes reales y videos, acompañan a cada ser vivo.</li>
+                                <li>Divididos por hábitats ➤ aéreo | terrestre | acuático</li>
+                                <li className={styles.liinline}>
+                                    Variedad del reino animal: <span className={styles.firstItem}>• Extintos</span>
+                                    <ul className={styles.textList2}>
+                                        <li>En Peligro de extinción </li>
+                                        <li>Mitológicos  </li>
+                                        <li>Exóticos </li>
+                                        <li>Típicos </li>
+                                    </ul>
+                                </li>
+
+                                <li className={styles.liinline3}>
+                                    Variedad del reino animal:
+                                    <ul className={styles.textList3}>
+                                        <li>Extintos </li>
+                                        <li>En Peligro de extinción </li>
+                                        <li>Mitológicos  </li>
+                                        <li>Exóticos </li>
+                                        <li>Típicos </li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>
-                </TabPanel>
-
-                <TabPanel value={value} index={1} dir={theme.direction}>
-                    Item Two
-                </TabPanel>
-                <TabPanel value={value} index={2} dir={theme.direction}>
-                    Item Three
                 </TabPanel>
             </Box>
         </div>

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import '../styles/header.css'
 import LogoULO from '../assets/LogoULO.png'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -11,9 +12,11 @@ export default function Header() {
 
   return (
     <header className="main-header">
-      <div className="header-logo-container">
-        <img src={LogoULO} alt="Logo ULO" className="header-logo" />
-      </div>
+      <a href="/">
+        <div className="header-logo-container">
+          <img src={LogoULO} alt="Logo ULO" className="header-logo" />
+        </div>
+      </a>
 
       <nav className="main-nav">
         <button

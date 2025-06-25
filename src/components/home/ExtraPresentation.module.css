@@ -13,23 +13,36 @@
   --spacing-lg: 40px;
 }
 
+.main-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 /* Contenedor del carrusel */
 .slider-wrapper {
   max-width: 90%;
-  margin: var(--spacing-lg) auto;
+  /* margin: var(--spacing-lg) auto; */
   padding: 0 var(--spacing-sm);
   box-sizing: border-box;
 }
 
 /* Título principal */
-.slider-title {
+/* .slider-title {
+  padding: 1rem;
   text-align: center;
-  margin-bottom: var(--spacing-lg);
-  color: var(--text-dark);
   font-size: 2.4em;
-  font-weight: 500;
   font-family: 'Poppins', sans-serif;
-  letter-spacing: -0.3px;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+.slider-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+  color: #444;
+  text-align: center;
+  padding: 1rem;
 }
 
 /* Estilo global para las slides de slick */
@@ -75,6 +88,16 @@
   font-weight: 500;
   line-height: 1.4;
 }
+
+:global(.slick-dots) {
+  position: static !important;  /* quita absolute */
+  margin-top: 10px;              /* separa los dots del slider */
+  padding: 0;
+  display: flex !important;
+  justify-content: center;
+  list-style: none;
+}
+
 
 /* Responsivo para móviles */
 @media (max-width: 600px) {

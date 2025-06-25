@@ -77,21 +77,23 @@ function ImageCarousel() {
 
     return (
         // Contenedor principal del carrusel, usa las clases de CSS Modules
-        <div className={styles["slider-wrapper"]}>
-            <h2 className={styles["slider-title"]}>ULO a través del tiempo..</h2>
-            <Slider {...settings}>
-                {/* Mapeamos el array de imágenes para renderizar cada diapositiva */}
-                {images.map(image => (
-                    // Cada diapositiva es un 'div' con una clave única para React
-                    <div key={image.id} className={styles["carousel-item-container"]}>
-                        <img
-                            src={image.src} // Fuente de la imagen
-                            alt={image.alt} // Texto alternativo para accesibilidad
-                            className={styles["carousel-image"]} // Clase para la imagen
-                        />
-                    </div>
-                ))}
-            </Slider>
+        <div className={styles["main-content"]}>
+            <div className={styles["slider-wrapper"]}>
+                <h2 className={styles["slider-title"]}>ULO a través del tiempo...</h2>
+                <Slider {...settings}>
+                    {/* Mapeamos el array de imágenes para renderizar cada diapositiva */}
+                    {images.map(image => (
+                        // Cada diapositiva es un 'div' con una clave única para React
+                        <div key={image.id} className={styles["carousel-item-container"]}>
+                            <img
+                                src={image.src} // Fuente de la imagen
+                                alt={image.alt} // Texto alternativo para accesibilidad
+                                className={styles["carousel-image"]} // Clase para la imagen
+                            />
+                        </div>
+                    ))}
+                </Slider>
+            </div>
         </div>
     );
 }
