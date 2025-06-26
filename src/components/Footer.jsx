@@ -1,9 +1,9 @@
 import '../styles/footer.css'
-import LogoULO from '../assets/LogoULO.png'
-import FacebookIcon from '../assets/FacebookBlanco.png'
-import WhatsappIcon from '../assets/WhatsappBlanco.png'
-import InstagramIcon from '../assets/InstagramBlanco.png'
-import GmailIcon from '../assets/GmailBlanco.png'
+import LogoULO from '../assets/LogoULO.webp'
+import FacebookIcon from '../assets/iconos/FacebookBlanco.png'
+import WhatsappIcon from '../assets/iconos/WhatsappBlanco.png'
+import InstagramIcon from '../assets/iconos/InstagramBlanco.png'
+import GmailIcon from '../assets/iconos/GmailBlanco.png'
 
 export default function Footer() {
     return (

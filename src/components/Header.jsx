@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import '../styles/header.css'
-import LogoULO from '../assets/LogoULO.png'
-import { Link } from 'react-router-dom'
+import LogoULO from '../assets/LogoULO.webp'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

@@ -8,8 +8,8 @@ export default function Presentation() {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.2, // Retraso entre la aparición de cada hijo
-                delayChildren: 0.3 // Retraso antes de que el primer hijo empiece
+                staggerChildren: 0.1, // Retraso entre la aparición de cada hijo
+                delayChildren: 0.2 // Retraso antes de que el primer hijo empiece
             }
         }
     };
