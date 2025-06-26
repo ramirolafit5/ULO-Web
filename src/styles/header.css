@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #71c5f0;
+    background-color: rgb(113, 197, 240);
     min-height: 60px; /* Puedes ajustar esta altura mínima si el logo es muy alto y quieres más espacio */
     flex-shrink: 0;
     height: 100px;
@@ -106,7 +106,8 @@
         position: absolute;
         top: 80px;
         right: 20px;
-        background-color: rgba(109, 95, 95, 0.2); /* antes tenías #b2ebf2 */
+        background-color: rgb(113, 197, 240, 0.6);
+        /* background-color: rgba(109, 95, 95, 0.2); */
         backdrop-filter: blur(8px); /* efecto de desenfoque moderno */
         width: 180px;
         box-shadow: 0 8px 16px rgba(0,0,0,0.2);
