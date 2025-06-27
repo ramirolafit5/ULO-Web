@@ -85,6 +85,7 @@ export default function FullWidthTabs() {
                             src={flipFondoMuñeco}
                             alt="Muñeco"
                             className={styles.sideImage}
+                            loading='eager'
                         />
 
                         <div className={styles.description}>
@@ -107,6 +108,7 @@ export default function FullWidthTabs() {
                             src={pruebaAlgunosAnimales}
                             alt="Naipes"
                             className={styles.sideImage}
+                            loading='eager'
                         />
 
                         <div className={styles.description}>
@@ -128,6 +130,7 @@ export default function FullWidthTabs() {
                             src={pruebaAlgunosAnimales}
                             alt="Animales"
                             className={styles.sideImage}
+                            loading='eager'
                         />
 
                         <div className={styles.description}>

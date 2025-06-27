@@ -1,27 +1,29 @@
 import './CuboGirando.css'
 import ulitoScreen from '../assets/ulitoScreen.webp'
+import LogoUloCuadrada from '../assets/LogoULOCuadradaPrueba.jpg'
+
 
 export default function CuboGirando() {
     return (
         <div className="cubo-container">
             <div className="cubo">
                 <div className="cara frente">
-                    <img src={ulitoScreen} alt="Frente" />
+                    <img src={LogoUloCuadrada} alt="Frente" />
                 </div>
                 <div className="cara atras">
-                    <img src={ulitoScreen} alt="Atrás" />
+                    <img src={LogoUloCuadrada} alt="Atrás" />
                 </div>
                 <div className="cara derecha">
-                    <img src={ulitoScreen} alt="Derecha" />
+                    <img src={LogoUloCuadrada} alt="Derecha" />
                 </div>
                 <div className="cara izquierda">
-                    <img src={ulitoScreen} alt="Izquierda" />
+                    <img src={LogoUloCuadrada} alt="Izquierda" />
                 </div>
                 <div className="cara arriba">
-                    <img src={ulitoScreen} alt="Arriba" />
+                    <img src={LogoUloCuadrada} alt="Arriba" />
                 </div>
                 <div className="cara abajo">
-                    <img src={ulitoScreen} alt="Abajo" />
+                    <img src={LogoUloCuadrada} alt="Abajo" />
                 </div>
             </div>
         </div>
