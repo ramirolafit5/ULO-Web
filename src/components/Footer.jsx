@@ -15,7 +15,7 @@ export default function Footer() {
                     </div>
                     <nav class="footer-links">
                         <a
-                            href="https://wa.me/5492364699034?text=Hola%2C%20quiero%20más%20información"
+                            href="https://wa.me/5492364204852?text=Hola%2C%20quiero%20más%20información"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -34,7 +34,7 @@ export default function Footer() {
                         </a>
 
                         <a
-                            href="https://wa.me/5492364699034?text=Hola%2C%20quiero%20más%20información"
+                            href="https://wa.me/5492364204852?text=Hola%2C%20quiero%20más%20información"
                             target="_blank"
                             rel="noopener noreferrer"
                         >

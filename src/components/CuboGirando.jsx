@@ -1,6 +1,5 @@
 import './CuboGirando.css'
-import ulitoScreen from '../assets/ulitoScreen.webp'
-import LogoUloCuadrada from '../assets/LogoULOCuadradaPrueba.jpg'
+import LogoUloCuadrada from '../assets/ULOGiratorio.webp'
 
 
 export default function CuboGirando() {
